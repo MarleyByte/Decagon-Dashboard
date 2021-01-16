@@ -8,288 +8,16 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="myStyle.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 
-<style>
-    body{
-        background-color: rgba(14, 12, 41, 0.88);
-    }
-.has-search .fa-search {
-    position: absolute;
-    z-index: 10;
-    top: 0.8rem;
-    left: 2rem;
-    border-radius: 5rem !important;
-}
-.togggle-button{
-    position: relative;
-}
-.center{
-    position: absolute;
-    left: 1rem;
-    
-}
-.center input{
-    position: relative;
-    width: 3.2rem;
-    top: 0.3rem;
-    height: 1.6rem;
-   -webkit-appearance: none;
-    background: rgb(255, 255, 255);
-    outline: none;
-    border-radius: 1.5rem;
-    transition: .5s;
-    box-shadow: inset 0 0 5px rgba(0,0,0,.2);
-}
-.center input:checked{
-    background-color: rgb(16, 207, 198);
-}
-.center input::before{
-    content: '';
-    position: absolute;
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 50%;
-    top: 0;
-    left: 0;
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,.2);
-    transition: .5s;
-}
-.center input:checked::before{
-    left: 50%;
-}
-.user-button{
-    padding-top: 4.5rem;
-}
-.user-button a{
-    background-color: rgb(16, 207, 198);
-    padding: 0.4rem 0.8rem;
-    border-radius: 0.6rem;
-    box-shadow: solid 1px 5px 10px rgba(16, 207, 198);
-}
-
-.user-button a:hover{
-    box-shadow: 1px 1px 10px 4px rgba(16, 207, 198);
-    padding: 0.411rem 0.811rem;
-}
-.user-button i{
-    color: rgb(255, 255, 255);
-    font-size: 1rem;
-}
-.user-row img{
-    width: 5rem;
-    height: 5rem;
-    border: solid 5px rgb(16, 207, 198);
-    margin-left: 2rem;
-}
-.download-results{
-    background-color: rgb(76, 13, 134);
-    color: rgb(255, 255, 255);
-    border-radius: 5rem !important;
-}
-
-.left-page{
-    margin: 10.5rem 7rem 0;
-    margin-left: 5.6rem;
-    color: rgb(255, 255, 255);
-}
-.left-search-inp{
-    border-radius: 3rem;
-    padding: 2rem 4rem !important;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 0.9rem !important;
-    width: 27rem;
-    border: 0;
-}
-.left-search-inp:focus{
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
-}
-.left-search{
-    position: relative;
-    margin-left: 5.6rem;
-}
-.left-search span{
-    position: absolute;
-    top: 1.2rem !important;
-    left: 1.5rem !important;
-    color: white;
-}
-.left-search span i{
-    font-size: 4rem !important;
-}
-.users i {
-    font-size: 2rem;
-    color: rgb(255, 255, 255);
-}
-
-.users .all{
-    background-color: rgb(250, 42, 205);
-}
-.users .male{
-    background-color: rgb(16, 207, 198);
-}
-.users .female{
-    background-color: rgb(134, 81, 184);
-}
-
-.pager li{
-    list-style-type: none;
-    display: inline-block;
-    border-radius: 4rem !important;
-}
-.pager a{
-    padding: .3rem .9rem .3rem;
-    border-radius: 0.5rem;
-    font-weight: bold;
-}
-.pager{
-    margin-top: 3rem;
-    margin-left: 7rem;
-}
-.pager .active{
-    background-color: black;
-    color: white;
-}
-.pager-nonactive{
-    background-color: grey
-}
-.users-icon-container{
-    margin-left: 3.9rem;
-}
-.show-user{
-    width: 25rem !important;
-    margin-left: 7rem;
-    color: rgba(202, 187, 187,.8);
-}
-.left-search input::placeholder{
-    color: rgba(202, 187, 187,.9);
-    font-weight: bold;
-}
-.right-page-bottom{
-    position: absolute;
-    width: 38rem;
-    bottom: 0;
-}
-.jumbotron{
-    position: relative;
-border-radius: 1.3rem;
-background-color: rgba(240,240,250);
-margin-left: -1.3rem;
-width: 41.6rem;
-padding-left: 3.5rem;
-padding-top: 2.2rem;
-min-height: 100vh;
-}
-.welcome{
-    font-size: 1.7rem;
-    font-weight: 700;
-    line-height: 3.2rem;
-}
-.left-page span{
-    font-weight: lighter !important;
-    font-size: 2.3rem;
-}
-.left-page h2{
-    font-size: 1.7rem;
-}
-.users a{
-    width: 60%;
-    height: 60%;
-    border-radius: 1rem;
-    transition-property: width, height;
-    transition-duration: 0.5s;
-}
-.users a:hover{
-    width: 70%;
-    height: 70%;
-}
-.users .male, .users .female{
-    padding: 3rem 2.1rem 3rem;
-}
-.right-search input{
-    border-radius: 3rem;
-    padding: 0.5rem 4rem ;
-}
-.welcome-message{
-    font-weight: lighter;
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.5);
-}
-.card{
-    border-radius: 1rem;
-    padding: 0;
-    margin-bottom: 1rem;
-    border: 0;
-}
-.find-in-list{
-    background-color: rgba(175, 160, 160, 0.3)
-}
-.card-text{
-    color: rgba(61, 56, 56, .6);
-    font-style: italic;
-    font-weight: 500;
-}
-.country-dropdown{
-    background-color: rgba(175, 160, 160, 0.3);
-    border-radius: 3rem;
-}
-.users-icon-container p{
-    color: rgba(202, 187, 187,.8);
-    margin-left: 0.7rem;
-}
-.users-icon-container .male-users, .users-icon-container .male-users{
-    margin-left: 0.4rem;
-}
-#filter-message{
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 4rem;
-    color: rgba(245, 138, 76,.7);
-    display: none;
-}
-.usersColumn{
-    min-height: 100vh !important;
-}
-#rightSearch::placeholder{
-    font-weight: bold;
-}
-.right-top-inp{
-    color: rgba(104, 102, 102, 0.95);
-}
-.userCategoryContainer{
-    position: relative;
-    margin-bottom: 4rem;
-    min-height: auto;
-}
-#allUsersCategory, #maleUsersCategory, #femaleUsersCategory,.userCategoryContainer{
-    position: absolute;
-}
-.userCategoryContainer p{
-    position: absolute;
-    top: 3rem;
-    left: 0.7rem;
-}
-#femaleUsersCategory,#maleUsersCategory{
-    opacity: 0;
-}
-.right-search-container, .right-dropdown-container, .right-toggle-container{
-    margin-top: 5rem;
-}
-.country-badge{
-    display: none;
-}
-
-</style>
-
-
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6 ">
+            <div class="col-md-6 leftPage-whole">
                 <div class="container">
                     <div class="row">
                         <div class="col-12 left-page mb-4">
@@ -303,7 +31,7 @@ min-height: 100vh;
                         <div class="col-12">
                             <div class="form-group has-search left-search">
                                 <span class="fa fa-search form-control-feedback"></span>
-                                <input type="text" class="form-control left-search-inp" placeholder="Find a user" id="leftSearch" onkeyup="searchUser2       ()">
+                                <input type="text" class="form-control left-search-inp" placeholder="Find a user" id="leftSearch" onkeyup="searchUser2()">
                             </div>
                         </div>
                     </div>
@@ -386,10 +114,10 @@ min-height: 100vh;
                                 <div class="card container-fluid userList female-user-profile">
                                     <div class="row">
                                         <div class="col-3 mt-4">
-                                            <img src="images/image 8.png" alt="" class="rounded-circle ">
+                                            <img src="images/test2.png" alt="" class="rounded-circle ">
                                         </div>
-                                        <div class="card-body .col-7 pb-0">
-                                            <h5 class="card-title">Shalom Chioma baby </h5>
+                                        <div class="card-body col-7 pb-0">
+                                            <h5 class="card-title">Alison Mark</h5>
                                             <p class="card-text">9278 new road, kilcoole, waterford &nbsp; &nbsp;<span class="font-weight-bold border badge country-badge"><i class="fa fa-globe" aria-hidden="true"></i>NG</span></p>
                                             <p  class="emailadd"> <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span> bradgipson@example.com</p>
                                         </div>
@@ -401,12 +129,12 @@ min-height: 100vh;
                                 <div class="card container-fluid userList male-user-profile">
                                     <div class="row">
                                         <div class="col-3 mt-4">
-                                            <img src="images/image 8.png" alt="" class="rounded-circle ">
+                                            <img src="images/image 3.png" alt="" class="rounded-circle ">
                                         </div>
-                                        <div class="card-body .col-7 pb-0 ">
-                                            <h5 class="card-title">Shalom Chioma marley</h5>
-                                            <p class="card-text">9278 new road, kilcoole, waterford &nbsp; &nbsp;<span class="font-weight-bold border badge country-badge"><i class="fa fa-globe" aria-hidden="true"></i>NG</span></p>
-                                            <p  class="emailadd"> <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span> bradgipson@example.com</p>
+                                        <div class="card-body col-7 pb-0 ">
+                                            <h5 class="card-title">Shayne marley</h5>
+                                            <p class="card-text">9278 new road, kilcoole, waterford &nbsp; &nbsp;<span class="font-weight-bold border badge country-badge"><i class="fa fa-globe" aria-hidden="true"></i>CH</span></p>
+                                            <p  class="emailadd"> <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span> shayneMarley@example.com</p>
                                         </div>
                                         <div class="col-2 user-button">
                                             <a href="#" class="btn"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
@@ -416,12 +144,12 @@ min-height: 100vh;
                                 <div class="card container-fluid userList female-user-profile">
                                     <div class="row mb-2">
                                         <div class="col-3 mt-4">
-                                            <img src="images/image 8.png" alt="" class="rounded-circle ">
+                                            <img src="images/designer.png" alt="" class="rounded-circle ">
                                         </div>
-                                        <div class="card-body .col-7 pb-0">
-                                            <h5 class="card-title">Shalom Chioma geeman</h5>
-                                            <p class="card-text">9278 new road, kilcoole, waterford &nbsp; &nbsp;<span class="font-weight-bold border badge country-badge"><i class="fa fa-globe" aria-hidden="true"></i>NG</span></p>
-                                            <p  class="emailadd"> <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span> bradgipson@example.com</p>
+                                        <div class="card-body col-7 pb-0">
+                                            <h5 class="card-title">Linda Walter geeman</h5>
+                                            <p class="card-text">9278 new road, kilcoole, waterford &nbsp; &nbsp;<span class="font-weight-bold border badge country-badge"><i class="fa fa-globe" aria-hidden="true"></i>US</span></p>
+                                            <p  class="emailadd"> <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span> walterGee@example.com</p>
                                         </div>
                                         <div class="col-2 user-button">
                                             <a href="#" class="btn"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
@@ -431,12 +159,12 @@ min-height: 100vh;
                                 <div class="card container-fluid userList female-user-profile">
                                     <div class="row">
                                         <div class="col-3 mt-4">
-                                            <img src="images/image 8.png" alt="" class="rounded-circle ">
+                                            <img src="images/test1.png" alt="" class="rounded-circle ">
                                         </div>
-                                        <div class="card-body .col-7 pb-0">
-                                            <h5 class="card-title">Shalom Chioma baby </h5>
-                                            <p class="card-text">9278 new road, kilcoole, waterford &nbsp; &nbsp;<span class="font-weight-bold border badge country-badge"><i class="fa fa-globe" aria-hidden="true"></i>NG</span></p>
-                                            <p  class="emailadd"> <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span> bradgipson@example.com</p>
+                                        <div class="card-body col-7 pb-0">
+                                            <h5 class="card-title">Benita Sam</h5>
+                                            <p class="card-text">9278 new road, kilcoole, waterford &nbsp; &nbsp;<span class="font-weight-bold border badge country-badge"><i class="fa fa-globe" aria-hidden="true"></i>UR</span></p>
+                                            <p  class="emailadd"> <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span> sbenita@example.com</p>
                                         </div>
                                         <div class="col-2 user-button">
                                             <a href="#" class="btn"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
@@ -446,12 +174,12 @@ min-height: 100vh;
                                 <div class="card container-fluid userList male-user-profile">
                                     <div class="row">
                                         <div class="col-3 mt-4">
-                                            <img src="images/image 8.png" alt="" class="rounded-circle ">
+                                            <img src="images/image 6.png" alt="" class="rounded-circle ">
                                         </div>
-                                        <div class="card-body .col-7 pb-0 ">
-                                            <h5 class="card-title">Shalom Chioma marley</h5>
-                                            <p class="card-text">9278 new road, kilcoole, waterford &nbsp; &nbsp;<span class="font-weight-bold border badge country-badge"><i class="fa fa-globe" aria-hidden="true"></i>NG</span></p>
-                                            <p  class="emailadd"> <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span> bradgipson@example.com</p>
+                                        <div class="card-body col-7 pb-0 ">
+                                            <h5 class="card-title">John Terry</h5>
+                                            <p class="card-text">9278 new road, kilcoole, waterford &nbsp; &nbsp;<span class="font-weight-bold border badge country-badge"><i class="fa fa-globe" aria-hidden="true"></i>AG</span></p>
+                                            <p  class="emailadd"> <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span> jterryson@example.com</p>
                                         </div>
                                         <div class="col-2 user-button">
                                             <a href="#" class="btn"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
@@ -461,12 +189,27 @@ min-height: 100vh;
                                 <div class="card container-fluid userList female-user-profile">
                                     <div class="row mb-2">
                                         <div class="col-3 mt-4">
-                                            <img src="images/image 8.png" alt="" class="rounded-circle ">
+                                            <img src="images/designer.png" alt="" class="rounded-circle ">
                                         </div>
-                                        <div class="card-body .col-7 pb-0">
-                                            <h5 class="card-title">Shalom Chioma geeman</h5>
+                                        <div class="card-body col-7 pb-0">
+                                            <h5 class="card-title">Isabela Carl</h5>
+                                            <p class="card-text">9278 new road, kilcoole, waterford &nbsp; &nbsp;<span class="font-weight-bold border badge country-badge"><i class="fa fa-globe" aria-hidden="true"></i>ES</span></p>
+                                            <p  class="emailadd"> <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span> isabellaCarl@example.com</p>
+                                        </div>
+                                        <div class="col-2 user-button">
+                                            <a href="#" class="btn"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card container-fluid userList male-user-profile">
+                                    <div class="row mb-2">
+                                        <div class="col-3 mt-4">
+                                            <img src="images/image 5.png" alt="" class="rounded-circle ">
+                                        </div>
+                                        <div class="card-body col-7 pb-0">
+                                            <h5 class="card-title">John Parker</h5>
                                             <p class="card-text">9278 new road, kilcoole, waterford &nbsp; &nbsp;<span class="font-weight-bold border badge country-badge"><i class="fa fa-globe" aria-hidden="true"></i>NG</span></p>
-                                            <p  class="emailadd"> <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span> bradgipson@example.com</p>
+                                            <p  class="emailadd"> <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span> parkerJohn@example.com</p>
                                         </div>
                                         <div class="col-2 user-button">
                                             <a href="#" class="btn"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
@@ -478,25 +221,10 @@ min-height: 100vh;
                                         <div class="col-3 mt-4">
                                             <img src="images/image 8.png" alt="" class="rounded-circle ">
                                         </div>
-                                        <div class="card-body .col-7 pb-0">
-                                            <h5 class="card-title">Shalom Chioma geeman</h5>
-                                            <p class="card-text">9278 new road, kilcoole, waterford &nbsp; &nbsp;<span class="font-weight-bold border badge country-badge"><i class="fa fa-globe" aria-hidden="true"></i>NG</span></p>
-                                            <p  class="emailadd"> <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span> bradgipson@example.com</p>
-                                        </div>
-                                        <div class="col-2 user-button">
-                                            <a href="#" class="btn"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card container-fluid userList male-user-profile">
-                                    <div class="row mb-2">
-                                        <div class="col-3 mt-4">
-                                            <img src="images/image 8.png" alt="" class="rounded-circle ">
-                                        </div>
-                                        <div class="card-body .col-7 pb-0">
-                                            <h5 class="card-title">Shalom Chioma geeman</h5>
-                                            <p class="card-text">9278 new road, kilcoole, waterford &nbsp; &nbsp;<span class="font-weight-bold border badge country-badge"><i class="fa fa-globe" aria-hidden="true"></i>NG</span></p>
-                                            <p  class="emailadd"> <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span> bradgipson@example.com</p>
+                                        <div class="card-body col-7 pb-0">
+                                            <h5 class="card-title">Kelly Wander</h5>
+                                            <p class="card-text">9278 new road, kilcoole, waterford &nbsp; &nbsp;<span class="font-weight-bold border badge country-badge"><i class="fa fa-globe" aria-hidden="true"></i>US</span></p>
+                                            <p  class="emailadd"> <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span> bkellyWander@example.com</p>
                                         </div>
                                         <div class="col-2 user-button">
                                             <a href="#" class="btn"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
@@ -526,208 +254,6 @@ min-height: 100vh;
             </div>
         </div>
     </div>
-
-    <script>
-        let allCategoryTitle = document.getElementById('allUsersCategory');
-             let maleCategoryTitle = document.getElementById('maleUsersCategory');
-             let femaleCategoryTitle = document.getElementById('femaleUsersCategory');
-             let maleButton = document.getElementById('maleEventId');
-             let femaleButton = document.getElementById('femaleEventId');
-             let allUsersButton = document.getElementById('allUsrsEventId');
-     
-            
-             maleButton.addEventListener("click", function(){
-                 if(Number(window.getComputedStyle(femaleCategoryTitle).getPropertyValue('opacity'))==1){
-                     fadeOut(femaleCategoryTitle);
-                     fadeIn(maleCategoryTitle);
-                 }
-                 else if(Number(window.getComputedStyle(allCategoryTitle).getPropertyValue('opacity'))==1){
-                     fadeOut(allCategoryTitle);
-                     fadeIn(maleCategoryTitle);
-                 }else{
-                    fadeIn(maleCategoryTitle);
-                 }
-             });
-     
-            
-             femaleButton.addEventListener("click", function(){
-                 if(Number(window.getComputedStyle(maleCategoryTitle).getPropertyValue('opacity'))==1){
-                     fadeOut(maleCategoryTitle);
-                     fadeIn(femaleCategoryTitle);
-                 }
-                 else if(Number(window.getComputedStyle(allCategoryTitle).getPropertyValue('opacity'))==1){
-                     fadeOut(allCategoryTitle);
-                     fadeIn(femaleCategoryTitle);
-                 }else{
-                    fadeIn(femaleCategoryTitle);
-                 }
-             });
-     
-            
-                allUsersButton.addEventListener("click", function(){
-                 if(Number(window.getComputedStyle(maleCategoryTitle).getPropertyValue('opacity'))==1){
-                     fadeOut(maleCategoryTitle);
-                     fadeIn(allCategoryTitle);
-                 }
-                 else if(Number(window.getComputedStyle(femaleCategoryTitle).getPropertyValue('opacity'))==1){
-                     fadeOut(maleCategoryTitle);
-                     fadeIn(allCategoryTitle);
-                 }else{
-                    fadeIn(allCategoryTitle); 
-                 }
-             });
-
-         //this function will show and unshow country of users
-         function showCountry(){
-             let countries = document.getElementsByClassName('country-badge');
-                if(countries[0].style.display === "inline"){
-                    for(var i = 0; i<countries.length; i++){
-                        countries[i].style.display = "none"
-                    }
-                }else{
-                    for(var i = 0; i<countries.length; i++){
-                        countries[i].style.display = "inline"
-                    }
-                }
-         } 
-         //this function search for users base on input
-         function searchUser(){
-             let filter = document.getElementById('rightSearch').value.toUpperCase();
-             let userNameClass = document.getElementsByClassName('card-title');
-             let userList = document.getElementsByClassName('userList');
-             let count_Unmatched_Users = 0;
-             let filterMessage = document.getElementById('filter-message');
-             for(var i=0; i<userNameClass.length; i++){
-                 let userName = userNameClass[i];
-     
-                 if(userName){
-                     let nameValue = userName.textContent || userName.innerHTML;
-     
-                     if(nameValue.toUpperCase().indexOf(filter)>-1){
-                         userList[i].style.display = "";
-                     }else{
-                         userList[i].style.display = "none";
-                     }
-                 }
-             }
-             for(var j=0; j<userList.length; j++){
-                 let displayProp = userList[j].style.display;
-                 if(displayProp !== "none"){
-                     count_Unmatched_Users++;
-                 }
-             }
-             if(count_Unmatched_Users === 0){
-                 filterMessage.style.display = "inline";
-             } else{
-                 filterMessage.style.display = "none";
-             }       
-             if(document.getElementById('rightSearch').value ===""){
-                 filterMessage.style.display = "none";
-             }
-         }
-     
-         function searchUser2(){
-             let filter = document.getElementById('leftSearch').value.toUpperCase();
-             let userNameClass = document.getElementsByClassName('card-title');
-             let userList = document.getElementsByClassName('userList');
-             let count_Unmatched_Users = 0;
-             let filterMessage = document.getElementById('filter-message');
-             for(var i=0; i<userNameClass.length; i++){
-                 let userName = userNameClass[i];
-     
-                 if(userName){
-                     let nameValue = userName.textContent || userName.innerHTML;
-     
-                     if(nameValue.toUpperCase().indexOf(filter)>-1){
-                         userList[i].style.display = "";
-                     }else{
-                         userList[i].style.display = "none";
-                     }
-                 }
-             }
-             for(var j=0; j<userList.length; j++){
-                 let displayProp = userList[j].style.display;
-                 if(displayProp !== "none"){
-                     count_Unmatched_Users++;
-                 }
-             }
-             if(count_Unmatched_Users === 0){
-                 filterMessage.style.display = "inline";
-             } else{
-                 filterMessage.style.display = "none";
-             }       
-             if(document.getElementById('leftSearch').value ===""){
-                 filterMessage.style.display = "none";
-             }
-         }
-         //function to display all users
-             function displayAllUsers(){
-                 let maleUsersProf = document.getElementsByClassName('male-user-profile');
-                 let femaleUsersProf = document.getElementsByClassName('female-user-profile');
-                 let userCategory = document.getElementById('userCategory');
-                 for(var i=0; i < maleUsersProf.length; i++ ){
-                         maleUsersProf[i].style.display = "";
-                     }
-                     for(var i=0; i < femaleUsersProf.length; i++ ){
-                         femaleUsersProf[i].style.display = "";
-                     }
-             }
-         //function to display male users
-         function displayMaleUsers(){
-             let maleUsersProf = document.getElementsByClassName('male-user-profile');
-                 let femaleUsersProf = document.getElementsByClassName('female-user-profile');
-                 let userCategory = document.getElementById('userCategory');
-                     for(var i=0; i < maleUsersProf.length; i++ ){
-                         maleUsersProf[i].style.display = "";
-                     }
-                     for(var i=0; i < femaleUsersProf.length; i++ ){
-                         femaleUsersProf[i].style.display = "none";
-                     }
-             }
-         //function to display female users
-         function displayFemaleUsers(){
-             let maleUsersProf = document.getElementsByClassName('male-user-profile');
-                 let femaleUsersProf = document.getElementsByClassName('female-user-profile');
-                 let userCategory = document.getElementById('userCategory');
-     
-                 for(var i=0; i < maleUsersProf.length; i++ ){
-                         maleUsersProf[i].style.display = "none";
-                     }
-                     for(var i=0; i < femaleUsersProf.length; i++ ){
-                         femaleUsersProf[i].style.display = "";
-                     }
-             }
-     
-         //function to animate the userCategory display
-             function fadeIn(title){
-                 let opacity = Number(window.getComputedStyle(title).getPropertyValue('opacity'));
-                 let myVar = setInterval(
-                         function(){
-                             if(opacity==1){
-                                 clearInterval(myVar);
-                         }else{
-                             opacity+=0.1;
-                             title.style.opacity = opacity;
-                         }
-                     },20
-                 );
-             }
-             //function to animate the userCategory fade out
-             function fadeOut(title){
-                let opacity = Number(window.getComputedStyle(title).getPropertyValue('opacity'));
-                 let myVar = setInterval(
-                         function(){
-                             if(opacity==0){
-                                 clearInterval(myVar);
-                         }else{
-                             opacity-=0.1;
-                             title.style.opacity = opacity;
-                         }
-                     },20
-                 );
-             }
-             
-     </script>
-     
+     <script src="myScript.js"></script>
 </body>
 </html>
