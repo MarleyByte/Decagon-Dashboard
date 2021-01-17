@@ -22,11 +22,11 @@
 
        
         femaleButton.addEventListener("click", function(){
-            if(Number(window.getComputedStyle(maleCategoryTitle).getPropertyValue('opacity'))==1){
+            if(Number(window.getComputedStyle(maleCategoryTitle).getPropertyValue('opacity'))>=1){
                 fadeOut(maleCategoryTitle);
                 fadeIn(femaleCategoryTitle);
             }
-            else if(Number(window.getComputedStyle(allCategoryTitle).getPropertyValue('opacity'))==1){
+            else if(Number(window.getComputedStyle(allCategoryTitle).getPropertyValue('opacity'))>=1){
                 fadeOut(allCategoryTitle);
                 fadeIn(femaleCategoryTitle);
             }else{
@@ -36,12 +36,12 @@
 
        
            allUsersButton.addEventListener("click", function(){
-            if(Number(window.getComputedStyle(maleCategoryTitle).getPropertyValue('opacity'))==1){
+            if(Number(window.getComputedStyle(maleCategoryTitle).getPropertyValue('opacity'))>=1){
                 fadeOut(maleCategoryTitle);
                 fadeIn(allCategoryTitle);
             }
-            else if(Number(window.getComputedStyle(femaleCategoryTitle).getPropertyValue('opacity'))==1){
-                fadeOut(maleCategoryTitle);
+            else if(Number(window.getComputedStyle(femaleCategoryTitle).getPropertyValue('opacity'))>=1){
+                fadeOut(femaleCategoryTitle);
                 fadeIn(allCategoryTitle);
             }else{
                fadeIn(allCategoryTitle); 
