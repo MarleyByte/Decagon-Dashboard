@@ -174,7 +174,7 @@
             let opacity = Number(window.getComputedStyle(title).getPropertyValue('opacity'));
             let myVar = setInterval(
                     function(){
-                        if(opacity==1){
+                        if(opacity>=1){
                             clearInterval(myVar);
                     }else{
                         opacity+=0.1;
@@ -188,7 +188,7 @@
            let opacity = Number(window.getComputedStyle(title).getPropertyValue('opacity'));
             let myVar = setInterval(
                     function(){
-                        if(opacity==0){
+                        if(opacity<=0){
                             clearInterval(myVar);
                     }else{
                         opacity-=0.1;
