@@ -14,5 +14,5 @@ Aleast 50% of this project was implemented with bootstrap.
 JavaScript or JS is the programming language of the web use to program html Elements by utilizing the HTML Document Object Model or DOM for Short. All animations for this project was implemented with JS.
 ## Project Status:
 ### In development
-## Deployed on netlify https://devgamalieldashboard.netlify.app/
+## Deployed on netlify https://devgameydashboard.netlify.app/
 
