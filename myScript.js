@@ -6,7 +6,7 @@
         let femaleButton = document.getElementById('femaleEventId');
         let allUsersButton = document.getElementById('allUsrsEventId');
 
-       
+       //male button event listener to change user category title to "Male users"
         maleButton.addEventListener("click", function(){
             if(Number(window.getComputedStyle(femaleCategoryTitle).getPropertyValue('opacity'))==1){
                 fadeOut(femaleCategoryTitle);
@@ -20,7 +20,7 @@
             }
         });
 
-       
+       //female button event listener to change user categoty title to "female Users"
         femaleButton.addEventListener("click", function(){
             if(Number(window.getComputedStyle(maleCategoryTitle).getPropertyValue('opacity'))>=1){
                 fadeOut(maleCategoryTitle);
@@ -34,7 +34,7 @@
             }
         });
 
-       
+       //All users button event listener to change user category title to "all users"
            allUsersButton.addEventListener("click", function(){
             if(Number(window.getComputedStyle(maleCategoryTitle).getPropertyValue('opacity'))>=1){
                 fadeOut(maleCategoryTitle);
@@ -96,7 +96,7 @@
             filterMessage.style.display = "none";
         }
     }
-
+//search function for the search input on the left to search any user
     function searchUser2(){
         let filter = document.getElementById('leftSearch').value.toUpperCase();
         let userNameClass = document.getElementsByClassName('card-title');
