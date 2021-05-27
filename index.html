@@ -18,11 +18,14 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 leftPage-whole">
-                <div class="container">
-                    <div class="row">
+                <div class="container ">
+                    <div class="row px-3 mb-4">
                         <div class="col-12 left-page mb-4">
-                            <h2><span class="display-4 welcome">Hello,</span> Emerald</h2>
-                            <p class="welcome-message">welcome to your dashboard, kindly sort through the user base</p>
+                            <div class="hello-emerald" style="width: 70%; margin: 11em auto 4em auto;">
+                                <h2><span class="display-4">Hello,</span> Emerald</h2>
+                                 <p class="welcome-message">welcome to your dashboard, kindly sort through the user base</p>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -30,7 +33,6 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="form-group has-search left-search">
-                                <span class="fa fa-search form-control-feedback"></span>
                                 <input type="text" class="form-control left-search-inp" placeholder="Find a user" id="leftSearch" onkeyup="searchUser2()">
                             </div>
                         </div>
@@ -39,20 +41,29 @@
                 <div class="container">
                     <div class="row mb-4">
                         <div class="col-12">
-                            <h5 class="show-user mb-3">Show user</h5><br>
+                            <h2 class="show-user mb-3">Show user</h2><br>
                             <div class="container">
                                 <div class="row  users-icon-container">
-                                    <div class="col-4 users" onclick="displayAllUsers()" id="allUsrsEventId">
-                                        <a href="#" class="btn p-4 all" ><i class="fa fa-users" aria-hidden="true"></i></a>
+                                    <div class="col-4 users px-0" onclick="displayAllUsers()" id="allUsrsEventId">
+                                        <div>
+                                            <span class="btn p-4 all" ><i class="fa fa-users" aria-hidden="true"></i></span>
                                         <p class="mt-2">All users</p>
+                                        </div>
+                                        
                                     </div>
-                                    <div class="col-4 users pl-0 " onclick="displayMaleUsers()" id="maleEventId">
-                                        <a href="#" class="btn py-4 male "><i class="fa fa-male" aria-hidden="true"></i></a>
-                                        <p class="mt-2 male-users">Male users</p>
+                                    <div class="col-4 users px-0 " onclick="displayMaleUsers()" id="maleEventId">
+                                        <div>
+                                            <span class="btn py-4 male "><i class="fa fa-male" aria-hidden="true"></i></span>
+                                            <p class="mt-2 male-users">Male users</p>
+                                        </div>
+                                       
                                     </div>
-                                    <div class="col-4 users pl-0 " onclick="displayFemaleUsers()" id="femaleEventId">
-                                        <a href="#" class="btn py-4 female " ><i class="fa fa-female" aria-hidden="true"></i></a>
+                                    <div class="col-4 users px-0 " onclick="displayFemaleUsers()" id="femaleEventId">
+                                        <div>
+                                            <span class="btn py-4 female " ><i class="fa fa-female" aria-hidden="true"></i></span>
                                         <p class="mt-2 female-users">Female users</p>
+                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -61,26 +72,40 @@
                 </div>
             </div>
             <!--end of left page column-->
-            <div class="col-md-6 righ-page pt-3">
+            <div class="col-md-6 p-3">
                 <div class="container-fluid jumbotron">
                     <div class="container">
                         <div class="row">
-                            <div class="col-12 userCategoryContainer">
-                                <h2 class="welcome display-4 bold ml-2 " id="allUsersCategory">All Users</h2>
-                                    <h2 class="welcome display-4 bold ml-2 " id="maleUsersCategory">Male Users</h2>
-                                    <h2 class="welcome display-4 bold ml-2 " id="femaleUsersCategory">Female Users</h2> 
-                                    <p class="ml-2">filter by</p>
-                            </div>
-                            <div class="col-6 right-search-container">
-                                  <div class="form-group has-search right-search">
-                                    <span class="fa fa-search form-control-feedback"></span>
-                                    <input type="text" class="form-control find-in-list" id="rightSearch" placeholder="Find in list" onkeyup="searchUser()">
+                            <div class="col-12">
+                                <div class="userCategoryContainer mb-2" style="height: 3em;">
+                                    <h3 class="" id="allUsersCategory">All Users</h3>
+                                    <h3 class="" id="maleUsersCategory">Male Users</h3>
+                                    <h3 class="" id="femaleUsersCategory">Female Users</h>
                                 </div>
                             </div>
-                            <div class="col-3 right-dropdown-container">
-                                <div class="container ">
-                                    <div class="dropdown ">
-                                      <button class="btn country-dropdown dropdown-toggle font-weight-bold right-top-inp" type="button" data-toggle="dropdown">country
+                            <div class="col-4">
+                                <p>filter by</p>
+                                  <div class="form-group right-search">
+                                    <input type="text" class="form-control find-in-list" id="rightSearch" placeholder="search" onkeyup="searchUser()">
+                                </div>
+                            </div>
+                            <div class="col-4 right-dropdown-container">
+                                <p>select country</p>
+                                    <div class="dropdown" style="margin-top: 2.4em;">
+                                        <select name="country" style="border-radius: 6px;">
+                                            <option value="none">none</option>
+                                            <option value="Nigeria">Nigeria</option>
+                                            <option value="Nigeria">USA</option>
+                                            <option value="Nigeria">Brazil</option>
+                                            <option value="Nigeria">China</option>
+                                            <option value="Nigeria">Ivory Coast</option>
+                                            <option value="Nigeria">Cuba</option>
+                                            <option value="Nigeria">Gambia</option>
+                                            <option value="Nigeria">Newzealand</option>
+                                            <option value="Nigeria">Egypt</option>
+                                            <option value="Nigeria">Switzerland</option>
+                                        </select>
+                                      <!-- <button style="" class="btn country-dropdown dropdown-toggle font-weight-bold right-top-inp" type="button" data-toggle="dropdown">country
                                       <span class="caret"></span></button>
                                       <ul class="dropdown-menu">
                                         <li class="text-center"><a href="#">Nigeria</a></li>
@@ -93,15 +118,18 @@
                                         <li class="text-center"><a href="#">South Africa</a></li>
                                         <li class="text-center"><a href="#">Egypt</a></li>
                                         <li class="text-center"><a href="#">Switzerland</a></li>
-                                      </ul>
+                                      </ul> -->
                                     </div>
                                   </div>
-                            </div>
-                            <div class="col-3 toggle-button right-toggle-container" onclick="showCountry()">
-                                <div class="center">
-                                    <input type="checkbox" name=""> <p class="font-weight-bold right-top-inp">Show country</p>
+                            <div class="col-4">
+                                <p>show&nbsp;country</p>
+                                <div class=" toggle-button right-toggle-container" onclick="showCountry()">
+                                    <div class="center">
+                                        <input type="checkbox" name=""> 
+                                    </div>
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
     
@@ -116,12 +144,12 @@
                                         <div class="col-3 mt-4">
                                             <img src="images/test2.png" alt="" class="rounded-circle ">
                                         </div>
-                                        <div class="card-body col-7 pb-0">
+                                        <div class="card-body col-6 pb-0">
                                             <h5 class="card-title">Alison Mark</h5>
                                             <p class="card-text">9278 new road, kilcoole, waterford &nbsp; &nbsp;<span class="font-weight-bold border badge country-badge"><i class="fa fa-globe" aria-hidden="true"></i>NG</span></p>
                                             <p  class="emailadd"> <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span> bradgipson@example.com</p>
                                         </div>
-                                        <div class="col-2 user-button">
+                                        <div class="col-3 user-button">
                                             <a href="#" class="btn"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                                         </div>
                                     </div>
@@ -131,12 +159,12 @@
                                         <div class="col-3 mt-4">
                                             <img src="images/image 3.png" alt="" class="rounded-circle ">
                                         </div>
-                                        <div class="card-body col-7 pb-0 ">
+                                        <div class="card-body col-6 pb-0 ">
                                             <h5 class="card-title">Shayne marley</h5>
                                             <p class="card-text">9278 new road, kilcoole, waterford &nbsp; &nbsp;<span class="font-weight-bold border badge country-badge"><i class="fa fa-globe" aria-hidden="true"></i>CH</span></p>
                                             <p  class="emailadd"> <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span> shayneMarley@example.com</p>
                                         </div>
-                                        <div class="col-2 user-button">
+                                        <div class="col-3 user-button">
                                             <a href="#" class="btn"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                                         </div>
                                     </div>
@@ -146,12 +174,12 @@
                                         <div class="col-3 mt-4">
                                             <img src="images/designer.png" alt="" class="rounded-circle ">
                                         </div>
-                                        <div class="card-body col-7 pb-0">
+                                        <div class="card-body col-6 pb-0">
                                             <h5 class="card-title">Linda Walter geeman</h5>
                                             <p class="card-text">9278 new road, kilcoole, waterford &nbsp; &nbsp;<span class="font-weight-bold border badge country-badge"><i class="fa fa-globe" aria-hidden="true"></i>US</span></p>
                                             <p  class="emailadd"> <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span> walterGee@example.com</p>
                                         </div>
-                                        <div class="col-2 user-button">
+                                        <div class="col-3 user-button">
                                             <a href="#" class="btn"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                                         </div>
                                     </div>
@@ -161,12 +189,12 @@
                                         <div class="col-3 mt-4">
                                             <img src="images/test1.png" alt="" class="rounded-circle ">
                                         </div>
-                                        <div class="card-body col-7 pb-0">
+                                        <div class="card-body col-6 pb-0">
                                             <h5 class="card-title">Benita Sam</h5>
                                             <p class="card-text">9278 new road, kilcoole, waterford &nbsp; &nbsp;<span class="font-weight-bold border badge country-badge"><i class="fa fa-globe" aria-hidden="true"></i>UR</span></p>
                                             <p  class="emailadd"> <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span> sbenita@example.com</p>
                                         </div>
-                                        <div class="col-2 user-button">
+                                        <div class="col-3 user-button">
                                             <a href="#" class="btn"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                                         </div>
                                     </div>
@@ -176,12 +204,12 @@
                                         <div class="col-3 mt-4">
                                             <img src="images/image 6.png" alt="" class="rounded-circle ">
                                         </div>
-                                        <div class="card-body col-7 pb-0 ">
+                                        <div class="card-body col-6 pb-0 ">
                                             <h5 class="card-title">John Terry</h5>
                                             <p class="card-text">9278 new road, kilcoole, waterford &nbsp; &nbsp;<span class="font-weight-bold border badge country-badge"><i class="fa fa-globe" aria-hidden="true"></i>AG</span></p>
                                             <p  class="emailadd"> <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span> jterryson@example.com</p>
                                         </div>
-                                        <div class="col-2 user-button">
+                                        <div class="col-3 user-button">
                                             <a href="#" class="btn"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                                         </div>
                                     </div>
@@ -191,12 +219,12 @@
                                         <div class="col-3 mt-4">
                                             <img src="images/designer.png" alt="" class="rounded-circle ">
                                         </div>
-                                        <div class="card-body col-7 pb-0">
+                                        <div class="card-body col-6 pb-0">
                                             <h5 class="card-title">Isabela Carl</h5>
                                             <p class="card-text">9278 new road, kilcoole, waterford &nbsp; &nbsp;<span class="font-weight-bold border badge country-badge"><i class="fa fa-globe" aria-hidden="true"></i>ES</span></p>
                                             <p  class="emailadd"> <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span> isabellaCarl@example.com</p>
                                         </div>
-                                        <div class="col-2 user-button">
+                                        <div class="col-3 user-button">
                                             <a href="#" class="btn"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                                         </div>
                                     </div>
@@ -206,12 +234,12 @@
                                         <div class="col-3 mt-4">
                                             <img src="images/image 5.png" alt="" class="rounded-circle ">
                                         </div>
-                                        <div class="card-body col-7 pb-0">
+                                        <div class="card-body col-6 pb-0">
                                             <h5 class="card-title">John Parker</h5>
                                             <p class="card-text">9278 new road, kilcoole, waterford &nbsp; &nbsp;<span class="font-weight-bold border badge country-badge"><i class="fa fa-globe" aria-hidden="true"></i>NG</span></p>
                                             <p  class="emailadd"> <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span> parkerJohn@example.com</p>
                                         </div>
-                                        <div class="col-2 user-button">
+                                        <div class="col-3 user-button">
                                             <a href="#" class="btn"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                                         </div>
                                     </div>
@@ -221,33 +249,36 @@
                                         <div class="col-3 mt-4">
                                             <img src="images/image 8.png" alt="" class="rounded-circle ">
                                         </div>
-                                        <div class="card-body col-7 pb-0">
+                                        <div class="card-body col-6 pb-0">
                                             <h5 class="card-title">Kelly Wander</h5>
                                             <p class="card-text">9278 new road, kilcoole, waterford &nbsp; &nbsp;<span class="font-weight-bold border badge country-badge"><i class="fa fa-globe" aria-hidden="true"></i>US</span></p>
                                             <p  class="emailadd"> <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span> bkellyWander@example.com</p>
                                         </div>
-                                        <div class="col-2 user-button">
+                                        <div class="col-3 user-button">
                                             <a href="#" class="btn"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                                         </div>
                                     </div>
-                                </div>
-                                
-                                
+                                </div>  
                             </div>
-                            <div class="container right-page-bottom">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <a href="#" class="btn download-results mt-5"><span><i class="fa fa-cloud-download" aria-hidden="true"></i></span> Download results</a>
-                                    </div>
-                                    <div class="col-6"> 
-                                            <ul class="pager">
-                                                <li><a href="#" class="btn pager-nonactive"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
-                                                <li><a href="#" class="btn active"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-                                              </ul>            
-                                      </div>
+                            
+                                <div class="col-12 pt-4">
+                                    <div class="row">
+                                            <div class="col-8"  >
+                                                <a href="#" style="font-size: 1em;" class="btn download-results"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download results</a>
+                                            </div>
+                                            <div class="col-4"> 
+                                                <div class="pager-container">
+                                                    <ul class="pager pl-0" >
+                                                        <li><a href="#" class="btn pager-nonactive"><i class="fa fa-angle-left" style="font-size: .8em;" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#" class="btn active"><i class="fa fa-angle-right" style="font-size: .8em;" aria-hidden="true"></i></a></li>
+                                                      </ul> 
+                                                </div>
+                                                             
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            
                         </div>
                     </div>   
                 </div>
